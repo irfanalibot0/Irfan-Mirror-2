@@ -65,12 +65,16 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/arshsisodiya/helios-mirror")
-    buttons.buildbutton("Support Group", "https://t.me/mirrorsociety")
+    buttons.buildbutton("Update Channel", "https://t.me/+Dh_VMsf4-RdhMmNl")
+    buttons.buildbutton("Support Group", "https://t.me/+1aeGtnvHLKI1NTU1")
+    buttons.buildbutton("Ping", "callback_data="ping")
+    buttons.buildbutton("Help", "callback_data="help")
+    buttons.buildbutton("Stats", "callback_data="stats")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        start_string = f'''
-This bot can mirror all your links to Google Drive!
+        start_string = f'''Hey! {uname}, I am one of the Telegram's most powerful and advanced Bot.
+This bot can mirror all your links
+to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
