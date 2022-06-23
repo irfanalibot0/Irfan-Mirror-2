@@ -70,7 +70,7 @@ def start(update, context):
     uname = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        start_string = f'''Hey! {uname}, I am one of the <a href="">Telegram</a>'s most powerful and advanced Bot.\n
+        start_string = f'''Hey! {uname}, I am one of the <a href="https://telegram.org/">Telegram</a>'s most powerful and advanced Bot.\n
 You can use me to Download any direct link & any Youtube-Dl Supported link to <a href="https://telegram.org/">Telegram</a>.\n\n     <b>Note: You can also download from some ott's like <a href="https://www.hoichoi.tv/">Hoichoi</a>, <a href="https://www.aha.video/">AHA</a>, <a href="https://www.mxplayer.in/">Mxplayer</a>, <a href="https://www.zee5.com/">Zee5</a>, <a href="https://www.voot.com/">Voot</a>, <a href="https://bongobd.com/">BangoDB</a>, <a href="https://www.bioscopelive.com/">BioscopeLive</a>, <a href="https://www.shemaroome.com/">ShemarooMe</a> and some other OTT's.</b> \n\n <b>I am a leach bot. I can upload 2GB file by splinting. This bot can mirror all your links to <a href="https://drive.google.com/">Google Drive</a>!</b> \n
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
@@ -207,7 +207,7 @@ help = telegraph.create_page(
 
 def bot_help(update, context):
     button = ButtonMaker()
-    button.buildbutton("Click Here", f"https://telegra.ph/{help}")
+    button.buildbutton("Click Here To Button", f"https://telegra.ph/{help}")
     reply_markup = InlineKeyboardMarkup(button.build_menu(1))
     sendMarkup(help_string, context.bot, update.message, reply_markup)
 
