@@ -198,7 +198,7 @@ sudo_help_string = f'''<br><br><b> Sudo/Owner Only Commands </b><br><br>
 <b>/{BotCommands.RmleechlogCommand}</b>: Remove Leech Log
 '''
 help_string = f'''
-Hei, Need Help!!
+<b>I am a leach bot. I can upload 2GB file by splinting. This bot can mirror all your links to <a href="https://drive.google.com/">Google Drive</a>!</b> \n\n <b>Click button to get a list of available commands.</b>
 '''
 help = telegraph.create_page(
         title='Irfan-Mirror Help',
