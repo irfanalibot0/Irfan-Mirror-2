@@ -76,7 +76,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('Not Authorized user, deploy your own mirror-leech bot', context.bot, update.message, reply_markup)
+        sendMarkup('Hey! {uname}, Not Authorized user, <b>I am a leach bot. I can upload 2GB file by splinting. This bot can mirror all your links to <a href="https://drive.google.com/">Google Drive</a>!</b>', context.bot, update.message, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
@@ -201,14 +201,15 @@ help_string = f'''
 Hei, Need Help!!
 '''
 help = telegraph.create_page(
-        title='Helios-Mirror Help',
+        title='Irfan-Mirror Help',
         content=help_string_telegraph + sudo_help_string,
     )["path"]
 
 def bot_help(update, context):
     button = ButtonMaker()
     button.buildbutton("Click Here", f"https://telegra.ph/{help}")
-    reply_markup = InlineKeyboardMarkup(button.build_menu(1))
+    buttons.buildbutton("Owner", "https://t.me/Irfan50786")
+    reply_markup = InlineKeyboardMarkup(button.build_menu(2))
     sendMarkup(help_string, context.bot, update.message, reply_markup)
 
 def main():
